@@ -5,7 +5,6 @@ const Embed = Quill.import('blots/embed');
 
 class MentionBlot extends Embed {
   static create(data) {
-    console.log('[MentionBlot] - create', data)
     const node = super.create();
     const denotationChar = document.createElement('span');
     denotationChar.className = 'ql-mention-denotation-char';
@@ -13,12 +12,10 @@ class MentionBlot extends Embed {
     node.appendChild(denotationChar);
     node.innerHTML += data.value;
     let domNode = MentionBlot.setDataValues(node, data);
-    console.log('[MentionBlot] - domnode', domNode)
     return domNode;
   }
 
   static setDataValues(element, data) {
-    console.log('[MentionBlot] - setDataValues', element, data)
     const domNode = element;
     Object.keys(data).forEach((key) => {
       domNode.dataset[key] = data[key];
@@ -27,7 +24,6 @@ class MentionBlot extends Embed {
   }
 
   static value(domNode) {
-    console.log('[MentionBlot] - value', domNode)
     return domNode.dataset;
   }
 }
