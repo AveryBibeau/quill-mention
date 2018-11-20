@@ -1,6 +1,6 @@
-// import Quill from 'quill';
+import Quill from 'quill';
 
-// const Embed = Quill.import('blots/embed');
+const Embed = Quill.import('blots/embed');
 
 
 class MentionBlot extends Embed {
