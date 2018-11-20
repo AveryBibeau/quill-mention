@@ -1,6 +1,6 @@
-import Quill from 'quill';
+// import Quill from 'quill';
 
-const Embed = Quill.import('blots/embed');
+// const Embed = Quill.import('blots/embed');
 
 
 class MentionBlot extends Embed {
@@ -31,4 +31,5 @@ MentionBlot.blotName = 'mention';
 MentionBlot.tagName = 'span';
 MentionBlot.className = 'mention';
 
-Quill.register(MentionBlot);
+// Quill.register(MentionBlot);
+export default MentionBlot
