@@ -13,6 +13,7 @@ class MentionBlot extends Embed {
     node.appendChild(denotationChar);
     node.innerHTML += data.value;
     let domNode = MentionBlot.setDataValues(node, data);
+    console.log('[MentionBlot] - domnode', domNode)
     return domNode;
   }
 
