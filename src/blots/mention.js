@@ -12,7 +12,8 @@ class MentionBlot extends Embed {
     denotationChar.innerHTML = data.denotationChar;
     node.appendChild(denotationChar);
     node.innerHTML += data.value;
-    return MentionBlot.setDataValues(node, data);
+    let domNode = MentionBlot.setDataValues(node, data);
+    return domNode;
   }
 
   static setDataValues(element, data) {
